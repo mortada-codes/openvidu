@@ -18,8 +18,15 @@
 import freeice = require('freeice');
 import uuid = require('uuid');
 import platform = require('platform');
+import Webrtc = require('react-native-webrtc');
 
-
+const {   RTCPeerConnection,
+    RTCIceCandidate,
+    RTCSessionDescription,
+    RTCView,
+    MediaStream,
+    MediaStreamTrack,
+    getUserMedia, } = Webrtc;
 export interface WebRtcPeerConfiguration {
     mediaConstraints: {
         audio: boolean,
